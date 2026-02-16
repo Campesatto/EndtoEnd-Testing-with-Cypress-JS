@@ -12,17 +12,16 @@ describe('Atualizaçoes do My Info + Login', () => {
 
   })
 //Teste de atualização de menu
-it('My Info + NickName', function(){
+it.only('My Info + NickName', function(){
   
     cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
     //cy.title().should('include', 'Login')
     cy.get('[name="username"]').click().type('Admin');
     cy.get('[name="password"]').click().type('admin123');
     cy.get('.oxd-button').click();
-    cy.wait(3000);
+    cy.contains('.oxd-main-menu-item', 'My Info').should('be.visible').click();
     cy.get(':nth-child(6) > .oxd-main-menu-item > .oxd-text').click();
     cy.get(':nth-child(1) > .oxd-form > .oxd-form-actions > .oxd-button').click();
-    cy.wait(3000);
     cy.get('[name="firstName"]').click().clear().type('Vitor');
     
   })
@@ -66,7 +65,7 @@ it('My Info + NickName', function(){
 
   })
 
-    it('Teste de CSS - Dashboard', function(){
+    it.only('Teste de CSS - Dashboard', function(){
 
     cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
     cy.get('[name="username"]').click().type('Admin');
