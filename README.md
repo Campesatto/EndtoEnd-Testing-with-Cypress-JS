@@ -98,14 +98,6 @@ package.json
 
 ---
 
-## Author
-
-**Vitor Henrique Campesatto Lopes**  
-QA Automation Engineer  
-Orlando, FL  
-
-GitHub: https://github.com/Campesatto  
-LinkedIn: https://linkedin.com/in/vitor-campesatto-9bb6b1193
 
 
 
